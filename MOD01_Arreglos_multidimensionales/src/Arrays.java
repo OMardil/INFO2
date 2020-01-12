@@ -34,6 +34,16 @@ public class Arrays{
         x4[1] = new int[3];
         x4[2] = new int[3];
 
+
+        int[][] matrix = new int[3][3];
+        int contador = 1;
+
+        for(int row = 0; row < matrix.length; row++){
+            for(int column = 0; column < matrix[row].length; column++){
+                matrix[row][column] = contador++;
+            }
+        }
+
         
 
 
