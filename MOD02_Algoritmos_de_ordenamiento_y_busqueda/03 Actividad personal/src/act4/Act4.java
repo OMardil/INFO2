@@ -4,12 +4,12 @@ public class Act4 {
 
 	public static void main(String[] args) {
 
-		String[] arr1 = {"Hola", "abeja", "ave", "avenida", "avena", "zoologico" };
+		String[] arr1 = {"z", "x", "y", "c", "b", "d" };
 		bubbleSort(arr1);
 		print(arr1);
 		
 		
-		int[][] a = {{99,7,1},{4,2,5},{9,8,6}};
+		int[][] a = {{9,2,3},{4,5,6},{7,8,1}};
 		sortMatrix(a);
 		for(int[] row: a) {
 			for(int element: row) {
@@ -59,21 +59,29 @@ public class Act4 {
 		if (data == null)
 			return;
 		
-		for(int i = 0; i<data.length-1; i++) {
+		boolean flagSwap = true;		
+		
+		for(int i = 0; i<data.length-1 && flagSwap; i++) {
+			
+			flagSwap = false;
+			
 			for(int j = 0; j<data.length-1-i; j++) {
-				compareAndSwap(data, j, j+1);				
+				flagSwap |= compareAndSwap(data, j, j+1);				
 			}
 		}
 		
 	}
 
 
-	private static void compareAndSwap(String[] data, int i, int j) {
+	private static boolean compareAndSwap(String[] data, int i, int j) {
 		
 		int result = data[i].compareTo(data[j]);
 		if (result < 0) {
 			swap(data, i, j);
+			return true;
 		}
+		
+		return false;
 		
 	}
 
