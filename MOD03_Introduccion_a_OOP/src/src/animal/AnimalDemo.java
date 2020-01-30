@@ -7,15 +7,23 @@ public class AnimalDemo {
 		Animal rhino = new Animal();
 		rhino.name = "Sally";
 		rhino.race = "White Rhino";
-		rhino.hunger = 5; //very hungry!
-		rhino.food = new String[]{"fruit", "bushes", "grass"};
+		rhino.hunger = 10; //very hungry!
+		rhino.foods = new String[]{"fruit", "bushes", "grass"};
 		
 		
 		Animal bear = new Animal();
 		bear.name = "Yogi";
 		bear.race = "Grizzly";
 		bear.hunger = 3; //moderate
-		bear.food   = new String[] {"fish", "berries"};
+		bear.foods   = new String[] {"fish", "berries"};
+		
+		bear.eat("bushes");
+		bear.eat("fish");
+		bear.eat("berries");
+		bear.eat("fruit");
+		bear.eat("fish");
+		bear.eat("fish");
+		
 		
 	}
 
