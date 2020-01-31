@@ -11,19 +11,8 @@ public class AnimalDemo {
 		rhino.foods = new String[]{"fruit", "bushes", "grass"};
 		
 		
-		Animal bear = new Animal();
-		bear.name = "Yogi";
-		bear.race = "Grizzly";
-		bear.hunger = 3; //moderate
-		bear.foods   = new String[] {"fish", "berries"};
-		
+		Animal bear = new Animal("Yogi", "Grizzly", new String[] {"fish","berries"}, 3);
 		bear.eat("bushes");
-		bear.eat("fish");
-		bear.eat("berries");
-		bear.eat("fruit");
-		bear.eat("fish");
-		bear.eat("fish");
-		
 		
 	}
 

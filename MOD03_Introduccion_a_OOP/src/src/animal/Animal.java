@@ -5,7 +5,16 @@ public class Animal {
 	public String name; 
 	public String race;
 	public String[] foods; //array with food the animal likes
-	public int hunger; //1 -> not hungry, 10 -> very hungry
+	private int hunger; //1 -> not hungry, 10 -> very hungry
+	
+	public Animal(String name, String race, String[] foods, int hunger) {
+		this.name = name;
+		this.race = race;
+		this.foods = foods;
+		this.hunger = hunger;
+	}
+	
+	public Animal() {}
 	
 	public void eat(String inputFood) {
 		if (hunger <= 0) {
