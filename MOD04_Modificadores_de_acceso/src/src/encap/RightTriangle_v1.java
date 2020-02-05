@@ -13,7 +13,6 @@ public class RightTriangle_v1 {
 		} else {
 			this.setBase(base);
 			this.setHeight(height);
-			this.height = height;
 		}
 	}
 	
@@ -26,7 +25,7 @@ public class RightTriangle_v1 {
 	}
 
 	public void setBase(double base) {
-		if (base > 0) {
+		if (base >= 0) {
 			this.base = base;
 			this.updateArea();
 		}
@@ -37,7 +36,7 @@ public class RightTriangle_v1 {
 	}
 	
 	public void setHeight(double height) {
-		if (height > 0) {
+		if (height >= 0) {
 			this.height = height;
 			this.updateArea();
 		}
