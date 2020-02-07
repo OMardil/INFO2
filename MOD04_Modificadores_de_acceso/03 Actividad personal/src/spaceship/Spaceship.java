@@ -64,4 +64,21 @@ public class Spaceship {
 		return out;
 	}
 	
+	public Spaceship clone() {
+		Spaceship out = new Spaceship(this.getShipName(), this.getMaxPassengers());
+		out.passengerCount = this.getPassengerCount();
+		return out;
+	}
+	
+	public boolean equals(Spaceship otherShip) {
+		if (this.maxPassengers == otherShip.maxPassengers && 
+				this.passengerCount == otherShip.passengerCount &&
+				this.shipName.equals(otherShip.shipName)) {
+			return true;
+		}
+		
+		return false;
+	
+	}	
+	
 }

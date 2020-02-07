@@ -11,13 +11,13 @@ public class Animal {
 		this.name = name;
 		this.race = race;
 		this.foods = foods;
-		this.hunger = hunger;
+		this.setHunger(hunger);
 	}
 	
 	public Animal() {}
 	
 	public void eat(String inputFood) {
-		if (hunger <= 0) {
+		if (getHunger() <= 0) {
 			System.out.println("I'm full!");
 			return;
 		}
@@ -27,7 +27,7 @@ public class Animal {
 		for(String food: foods) {
 			if (food.equals(inputFood)) {
 				//When animal eats, hunger is decreased
-				hunger--;
+				setHunger(getHunger() - 1);
 				System.out.println("Delicious! I love " + inputFood);
 				return;
 			}
@@ -35,6 +35,14 @@ public class Animal {
 		
 		// Otherwise, 
 		System.out.println("I don't like " + inputFood);
+	}
+
+	public int getHunger() {
+		return hunger;
+	}
+
+	public void setHunger(int hunger) {
+		this.hunger = hunger;
 	}
 	
 }

@@ -7,7 +7,7 @@ public class AnimalDemo {
 		Animal rhino = new Animal();
 		rhino.name = "Sally";
 		rhino.race = "White Rhino";
-		rhino.hunger = 10; //very hungry!
+		rhino.setHunger(10); //very hungry!
 		rhino.foods = new String[]{"fruit", "bushes", "grass"};
 		
 		
