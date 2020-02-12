@@ -4,12 +4,11 @@ public class Act4 {
 
 	public static void main(String[] args) {
 
-		String[] arr1 = {"z", "x", "y", "c", "b", "d" };
-		bubbleSort(arr1);
-		print(arr1);
+//		String[] arr1 = { "z", "x", "y", "c", "b", "d" };
+//		bubbleSort(arr1);
+//		print(arr1);
 		
-		
-		int[][] a = {{9,2,3},{4,5,6},{7,8,1}};
+		int[][] a = {{9,8,17,7},{6,23,5,1},{2,3,17,11},{2,3,17,11}};
 		sortMatrix(a);
 		for(int[] row: a) {
 			for(int element: row) {
@@ -17,8 +16,6 @@ public class Act4 {
 			}
 			System.out.println();
 		}
-		
-		
 	}
 
 
@@ -71,6 +68,12 @@ public class Act4 {
 		}
 		
 	}
+	
+	private static void swap(String[] data, int i, int j) {
+		String temp = data[j];
+		data[j] = data[i];
+		data[i] = temp;
+	}	
 
 
 	private static boolean compareAndSwap(String[] data, int i, int j) {
@@ -85,35 +88,33 @@ public class Act4 {
 		
 	}
 
-
-	private static void swap(String[] data, int i, int j) {
-		String temp = data[j];
-		data[j] = data[i];
-		data[i] = temp;
-	}
-	
 	
 	private static void sortMatrix(int[][] array) {
 		
-		
+		int swaps = 0, comparisons = 0;
 		int elementCount = array.length * array[0].length;
-		
-		for(int i = 0; i<elementCount; i++) {
-			
+
+		for (int i = 0; i < elementCount; i++) {
 			int min = i;
-			for(int j = i+1; j<elementCount; j++) {
-				if (array[min/array.length][min%array.length] > array[j/array.length][j%array.length])
-					swap(array, min, j);
+			for (int j = i + 1; j < elementCount; j++) {
+				comparisons++;
+				if (array[min / array.length][min % array[0].length] > array[j / array.length][j % array.length]) {
+					min = j;
+				}
 			}
-			
+			swap(array, min, i);		
+			if (min != i) swaps++;
 		}
 		
-		
+		System.out.println("Swaps: " + swaps);
+		System.out.println("Comparisons: " + comparisons);
 	}
-
 
 	private static void swap(int[][] array, int a, int b) {
 
+		if (a == b)
+			return;
+		
 		int temp = array[a/array.length][a % array.length];
 		array[a/array.length][a % array.length] = array[b/array.length][b % array.length];		
 		array[b/array.length][b % array.length] = temp;
