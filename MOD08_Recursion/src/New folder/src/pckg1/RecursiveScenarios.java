@@ -1,7 +1,10 @@
-public class HelloWorld{
+package pckg1;
+
+public class RecursiveScenarios {
 
      public static void main(String []args){
-       /* boolean b1 = isPalindrome("holoh");
+        
+    	boolean b1 = isPalindrome("holoh");
         System.out.println(b1);
         b1 = isPalindrome("hola");
         System.out.println(b1);
@@ -13,7 +16,6 @@ public class HelloWorld{
         System.out.println(b1); 
         b1 = isPalindrome("");
         System.out.println(b1);   
-        */
         
         char[] array = new char[]{'h','o','l','h'};
         System.out.println(isPalindrome(array));
