@@ -12,11 +12,12 @@ public class BigO {
 		
 	}
 
-	
-	public static int countArrayElementsA(int[] a) {
-		return a.length;
+	//Big(O) = O(1)
+	public static int countArrayElementsA(int[] a, String input) {
+		return a.length; //atributo de la clase array
 	}
-	
+
+	//Big(O) = O(n)
 	public static int countArrayElementsB(int[] a) {
 		int count = 0;
 		for(int i=0; i<a.length; i++) {
@@ -24,9 +25,11 @@ public class BigO {
 		}
 		return count;
 	}
-
+	
+	//Big(O) = O(n)
 	public static int countArrayElementsC(int[] a) {
 		int count = 0;
+		//O(n)
 		for(int i=0; i<a.length; i++) {
 			for(int j=0; j<10; j++) {
 				count++;
@@ -34,5 +37,16 @@ public class BigO {
 		}
 		return count/10;
 	}
+	
+	//Big(O) = O(n2)
+	public static int countArrayElementsD(int[] a) {
+		int count = 0;
+		for(int i=0; i<a.length; i++) {
+			for(int j=0; j<a.length; j++) {
+				count++;
+			}
+		}
+		return count/10;
+	}	
 	
 }
