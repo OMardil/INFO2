@@ -40,7 +40,7 @@ public class Watch {
 	}
 
 	private void updateHands(int remainingMinutes) {
-		if (remainingMinutes == 0) {
+		if (remainingMinutes <= 0) {
 			return;
 		} else if (remainingMinutes < 60) {
 			this.minutesHandAngle += 6;
