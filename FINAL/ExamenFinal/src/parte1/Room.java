@@ -6,6 +6,13 @@ public class Room {
 	private double price;
 	private boolean isEmpty;
 	
+	public Room(){
+		this.roomNumber = 0;
+		this.numberOfBeds = 0;
+		this.price = 0;
+		this.isEmpty = false;
+	}	
+	
 	public int getRoomNumber() {
 		return roomNumber;
 	}
@@ -30,6 +37,4 @@ public class Room {
 	public void setEmpty(boolean isEmpty) {
 		this.isEmpty = isEmpty;
 	}
-	
-	
 }

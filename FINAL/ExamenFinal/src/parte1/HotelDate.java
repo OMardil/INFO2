@@ -23,8 +23,13 @@ public class HotelDate {
 		return year;
 	}
 
-	public static int calculateDaysBetween(HotelDate x, HotelDate y) {
+	public static int calculateDaysBetween(HotelDate begin, HotelDate end) {
 		// Assume this method returns the count of days between two dates
 		return 0;
 	}
+	
+	//returns a copy of the HotelDate object
+	public HotelDate clone(){
+		return new HotelDate(this.getDay(), this.getMonth(), this.getYear());
+	}	
 }

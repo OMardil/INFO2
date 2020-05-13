@@ -10,8 +10,8 @@ public class Client {
 	public Client(int clientID, String clientName, HotelDate arrivalDate, HotelDate departureDate, Room room) {
 		this.clientID = clientID;
 		this.clientName = clientName;
-		this.arrivalDate = arrivalDate;
-		this.departureDate = departureDate;
+		this.arrivalDate = arrivalDate.clone();
+		this.departureDate = departureDate.clone();
 		this.room = room;
 	}
 
@@ -32,31 +32,32 @@ public class Client {
 	}
 
 	public HotelDate getArrivalDate() {
-		return arrivalDate;
+		return arrivalDate.clone();
 	}
 
 	public void setArrivalDate(HotelDate arrivalDate) {
-		this.arrivalDate = arrivalDate;
+		this.arrivalDate = arrivalDate.clone();
 	}
 
 	public HotelDate getDepartureDate() {
-		return departureDate;
+		return departureDate.clone();
 	}
 
 	public void setDepartureDate(HotelDate departureDate) {
-		this.departureDate = departureDate;
+		this.departureDate = departureDate.clone();
 	}
 
-	public Room getRoomNumber() {
+	public Room getRoom() {
 		return room;
 	}
 
-	public void setRoomNumber(Room roomNumber) {
-		this.room = roomNumber;
+	public void setRoom(Room room) {
+		this.room = room;
 	}
 
-	public void generateInvoice() {
+	public Invoice generateInvoice() {
 		// to be implemented
+		return null;
 	}
 
 }
