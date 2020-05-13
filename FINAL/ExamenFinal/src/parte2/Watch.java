@@ -57,27 +57,4 @@ public class Watch {
 				+ this.minutesHandAngle + "°\n";
 	}
 
-	public void draw() {
-		// watch hands are updated on screen
-	}
-
-	public static void main(String[] args) {
-
-		Watch myWatch = new Watch("Apple Watch");
-		myWatch.addMinutes(243);
-		System.out.println(myWatch);
-
-		Watch appleWatch = new Watch("Apple Watch");
-		Watch galaxyWatch = new Watch("Galaxy Watch");
-		Watch huaweiWatch = new Watch("Huawei Watch");
-
-		appleWatch.addMinutes(190);
-		galaxyWatch.addMinutes(360);
-		huaweiWatch.addMinutes(45);
-
-		System.out.println(appleWatch);
-		System.out.println(galaxyWatch);
-		System.out.println(huaweiWatch);
-	}
-
 }
